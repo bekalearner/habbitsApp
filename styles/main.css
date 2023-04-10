@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: #F3F6FD;
+    font-weight: 400;
+}
+
+.app {
+    display: flex;
+}
+
+.panel {
+    background: #fff;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.panel__logo img{
+    margin-bottom: 50px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu__item {
+    background: #fff;
+    box-shadow: 0px 8px 14px rgba(62, 10, 224, 0.1);
+    border-radius: 14px;
+    border: none;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.menu__item:hover {
+    background: #6a6af8;
+}
+
+.menu__item:hover img {
+    filter: brightness(0) invert(1)
+}
+
+.menu__item_active {
+    background: #5051f9;
+}
+
+.menu__item_active img {
+    filter: brightness(0) invert(1)
+}
+
+.menu__add {
+    background: none;
+    border: 1px solid #cad5ff;
+    border-radius: 14px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.menu__add:hover {
+    background: #8ea1ff;
+}
+.menu__add:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.content {
+    min-width: 900px;
+    padding: 45px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 33px;
+    color: #000;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 235px;
+}
+
+.progress__text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress__name {
+    font-size: 14px;
+    line-height: 16px;
+    color: #232360
+}
+
+.progress__bar {
+    position: relative;
+    width: 100%;
+    background: #e5e9ed;
+    border-radius: 4px;
+    height: 5px;
+}
+
+.progress__cover-bar {
+    position: absolute;
+    width: 80%;
+    background: #5051f9;
+    height: 5px;
+    border-radius: 4px
+}
+
+main {
+    margin-top: 30px;
+}
+
+.habbit {
+    margin-bottom: 12px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.habbit__day {
+    background: #fff;
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid #e7ebfb;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 20px 40px;
+    min-width: 140px;
+}
+.habbit__comment {
+    background: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 20px 25px;
+}
+.habbit__delete {
+    padding: 2px;
+    margin-left: auto;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.habbit__delete:hover {
+    background: #e7ebfb;
+}
+
+.habbit__form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding: 0px 25px;
+    position: relative;
+}
+
+input {
+    background: #fff;
+    border: 1px solid #e7ebfb;
+    border-radius: 9px;
+    padding: 12px 20px;
+    font-family: "Comfortaa", cursive;
+    flex: 1;
+}
+
+input::placeholder {
+    color: #8899a8;
+}
+
+.input_icon {
+    padding-left: 45px;
+}
+
+.input__icon {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+
+.habbit__add {
+    background: #edecfe;
+    border-radius: 9px;
+    border: none;
+    font-size: 13px;
+    line-height: 14px;
+    color: #5051f9;
+    padding: 14px 30px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.habbit__add:hover {
+    background: #dcdaff;
+}
