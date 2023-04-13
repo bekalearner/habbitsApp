@@ -17,28 +17,19 @@
                 <img src="./images/logo.svg" alt="logo">
             </div>
             <nav class="menu">
-                <div class="menu__list">
-                    <button class="menu__item menu__item_active">
-                       <img src="./images/water.svg" alt="Water">
-                    </button>
-                </div>
-                <div class="menu__list">
-                    <button class="menu__item">
-                       <img src="./images/food.svg" alt="Food">
-                    </button>
-                </div>
-                <button class="menu__add">
+                <div class="menu__list"></div>
+                <button class="menu__add" onclick="togglePopup()">
                     <img src="./images/add.svg" alt="add_button">
                 </button>
             </nav>
         </div>
         <div class="content">
             <header>
-                <h1>Push ups</h1>
+                <h1 class="h1">--</h1>
                 <div class="progress">
                     <div class="progress__text">
                         <div class="progress__name">Progress</div>
-                        <div class="progress__percent">80%</div>
+                        <div class="progress__percent">-%</div>
                     </div>
                     <div class="progress__bar">
                         <div class="progress__cover-bar"></div>
@@ -46,25 +37,37 @@
                 </div>
             </header>
             <main>
-                <div>
-                    <div class="habbit">
-                        <div class="habbit__day">Day 1</div>
-                        <div class="habbit__comment">Beginning is always tough</div>
-                        <div class="habbit__delete">
-                            <img src="./images/delete.svg" alt="delete">
-                        </div>
-                    </div>
-                    <div class="habbit">
-                        <div class="habbit__day">Day 2</div>
-                        <form class="habbit__form">
-                            <input class="input_icon" type="text" placeholder="Comment">
-                            <img class="input__icon" src="./images/comment.svg" alt="comment">
-                            <button class="habbit__add">Done</button>
-                        </form>
-                    </div>
+                <div id="days"></div>
+                <div class="habbit">
+                    <div class="habbit__day"></div>
+                    <form class="habbit__form" onsubmit="addDays(event)">
+                        <input name="comment" class="input_icon" type="text" placeholder="Comment">
+                        <img class="input__icon" src="./images/comment.svg" alt="comment">
+                        <button class="habbit__add">Done</button>
+                    </form>
                 </div>
             </main>
         </div>
+        <div class="cover cover_hidden" id="add-habbit-popup">
+            <div class="popup">
+                <h2>New habbit</h2>
+                <div class="icon-label"> Icon</div>
+                <div class="icon-select">
+                    <button class="icon-select__item icon-select__item_active" onclick="setIcon(this, 'food')"><img src="./images/food.svg" alt="food"></button>
+                    <button class="icon-select__item" onclick="setIcon(this, 'water')"><img src="./images/water.svg" alt="water"></button>
+                    <button class="icon-select__item" onclick="setIcon(this, 'sport')"><img src="./images/sport.svg" alt="sport"></button>
+                </div>
+                <form class="popup__form" onsubmit="addHabbit(event)">
+                    <input type="text" name="name" placeholder="Habbit">
+                    <input type="text" name="icon" hidden placeholder="Icon" value="sport">
+                    <input type="text" name="target" placeholder="Target">
+                    <button class="habbit__add" type="submit">Sumbit</button>
+                </form>
+                <button class="close"><img src="./images/cross.svg" alt="close" onclick="togglePopup()"></button>
+            </div>
+        </div>
     </div>
+
+    <script src="./scripts/app.js"></script>
 </body>
 </html>
